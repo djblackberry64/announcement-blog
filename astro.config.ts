@@ -85,7 +85,12 @@ export default defineConfig({
 		},
 	},
 	vite: {
+		// @ts-ignore
 		plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
+		resolve: {
+			// @ts-ignore
+			tsconfigPaths: true,
+		},
 	},
 	env: {
 		schema: {
