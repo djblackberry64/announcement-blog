@@ -20,6 +20,7 @@ import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
+	base: "/announcement-blog/",
 	image: {
 		domains: ["webmention.io"],
 	},
@@ -86,6 +87,7 @@ export default defineConfig({
 	vite: {
 		// @ts-ignore
 		plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
+
 		resolve: {
 			// @ts-ignore
 			tsconfigPaths: true,
